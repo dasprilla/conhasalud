@@ -1,175 +1,134 @@
+/* ================= CONFIGURACIÓN GENERAL ================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    width: 85%;
-    margin: auto;
-    padding: 60px 0;
-}
-
-header {
-    background: linear-gradient(135deg, #0c2d57, #123d73);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-}
-
-.subtitle {
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-.tagline {
-    margin-top: 10px;
-    font-style: italic;
-}
-
-.section h2 {
-    color: #0c2d57;
-    margin-bottom: 25px;
-    font-size: 28px;
-}
-
-.bg-light {
-    background-color: white;
-}
-
-.bg-dark {
-    background-color: #0c2d57;
-    color: white;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: #0c2d57;
-}
-
-.card ul {
-    list-style: none;
-}
-
-.card ul li {
-    margin-bottom: 8px;
-}
-
-.benefits {
-    list-style: none;
-}
-
-.benefits li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.benefits li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #0c2d57;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background-color: #ffffff;
-    color: #0c2d57;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.btn-light {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: white;
-    color: #0c2d57;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.contact p {
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #091f3b;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
-
-}
-/* ===== HEADER MEJORADO ===== */
-
-header {
-  background: linear-gradient(135deg, #0a3d62, #1e5f8a);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-header .subtitle {
-  font-size: 22px;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-header .tagline {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background: #f4f6f9;
   line-height: 1.6;
 }
 
+/* ================= CONTENEDOR ================= */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(135deg, #0a3d62, #1e5f8c);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.tagline {
+  margin: 20px 0 30px;
+  opacity: 0.9;
+}
+
+/* ================= SECCIONES ================= */
+.section {
+  text-align: center;
+}
+
+.bg-light {
+  background: #ffffff;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  gap: 25px;
+  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ================= CARD ================= */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.highlight {
+  border: 2px solid #0a3d62;
+}
+
+/* ================= BOTONES ================= */
 .btn {
-  background-color: #1dd1a1;
-  color: #0a3d62;
-  padding: 14px 28px;
+  background: #0a3d62;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.3s ease;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn:hover {
-  background-color: #10ac84;
-  transform: translateY(-2px);
+  background: #1e5f8c;
+}
+
+.small {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+}
+
+/* ================= FORMULARIO ================= */
+.contact-form {
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: none;
+}
+
+.form-step {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
