@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- CONFIGURACIÓN BÁSICA -->
+  <!-- ================= CONFIGURACIÓN GENERAL ================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONHASALUD | Consultora Nacional en Habilitación y Novedades en Salud</title>
@@ -11,7 +11,7 @@
 
 <body>
 
-<!-- ================= HEADER / PORTADA ================= -->
+<!-- ================= PORTADA ================= -->
 <header>
   <div class="container">
     <h1>CONHASALUD</h1>
@@ -54,8 +54,7 @@
 
     <p>
       CONHASALUD es una firma técnica especializada exclusivamente en procesos de habilitación 
-      de servicios de salud, gestión de novedades y acompañamiento integral en trámites derivados 
-      ante autoridades sanitarias en Colombia.
+      de servicios de salud, gestión de novedades y acompañamiento integral ante autoridades sanitarias en Colombia.
     </p>
 
     <p>
@@ -106,7 +105,7 @@
   </div>
 </section>
 
-<!-- ================= PLANES Y MEMBRESÍA ================= -->
+<!-- ================= PLANES ================= -->
 <section class="section">
   <div class="container">
     <h2>Planes y Membresía CONHASALUD</h2>
@@ -129,10 +128,10 @@
         <h3>Plan Cumplimiento Anual 360°</h3>
         <ul>
           <li>Actualización normativa permanente</li>
-          <li>Plantillas y formatos actualizados</li>
-          <li>Checklist mensual de cumplimiento</li>
+          <li>Plantillas actualizadas</li>
+          <li>Checklist mensual</li>
           <li>Soporte técnico prioritario</li>
-          <li>Acceso a capacitaciones exclusivas</li>
+          <li>Acceso a capacitaciones</li>
         </ul>
         <a href="#contacto" class="btn">Afiliarme al Plan</a>
       </div>
@@ -161,19 +160,16 @@
 
       <div class="card">
         <h3>REPS</h3>
-        <p>Registro Especial de Prestadores de Servicios de Salud.</p>
         <a href="https://prestadores.minsalud.gov.co" target="_blank" class="btn">Ir a REPS</a>
       </div>
 
       <div class="card">
         <h3>Ministerio de Salud</h3>
-        <p>Normatividad y lineamientos técnicos oficiales.</p>
         <a href="https://www.minsalud.gov.co" target="_blank" class="btn">Ir al Ministerio</a>
       </div>
 
       <div class="card">
         <h3>Secretarías de Salud</h3>
-        <p>Directorio oficial nacional.</p>
         <a href="https://www.minsalud.gov.co/Ministerio/Institucional/Paginas/secretarias-de-salud.aspx" target="_blank" class="btn">Ver Secretarías</a>
       </div>
 
@@ -191,7 +187,7 @@
       <div class="card">
         <h3>NEQUI</h3>
         <p><strong>Número:</strong> 322 639 3712</p>
-        <p>Enviar comprobante vía WhatsApp para activación.</p>
+        <p>Enviar comprobante por WhatsApp para activación.</p>
       </div>
 
       <div class="card">
@@ -202,29 +198,59 @@
 
       <div class="card">
         <h3>Transferencia Bancaria</h3>
-        <p>Solicitar datos bancarios vía WhatsApp o correo.</p>
+        <p>Solicitar datos bancarios vía correo o WhatsApp.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACTO ================= -->
+<!-- ================= FORMULARIO DE CONTACTO PROFESIONAL ================= -->
 <section id="contacto" class="section bg-light">
-  <div class="container contact">
-    <h2>Contacto</h2>
+  <div class="container">
+    <h2>Solicitud de Diagnóstico o Activación de Servicio</h2>
 
-    <p>📧 tramites.habilitacion@gmail.com.com</p>
-    <p>📞 +57 322 639 3712</p>
-    <p>📍 Cobertura Nacional - Colombia</p>
+    <form action="https://formsubmit.co/tramites.habilitacion@gmail.com" method="POST" class="contact-form">
 
-    <a href="mailto:tramites.habilitacion@gmail.com" class="btn">
-      Enviar Correo
+      <!-- Configuración FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nueva solicitud desde CONHASALUD">
+      <input type="hidden" name="_template" value="table">
+
+      <label>Nombre completo</label>
+      <input type="text" name="Nombre" required>
+
+      <label>Correo electrónico</label>
+      <input type="email" name="Correo" required>
+
+      <label>Teléfono / WhatsApp</label>
+      <input type="text" name="Telefono" required>
+
+      <label>Tipo de servicio</label>
+      <select name="Servicio" required>
+        <option value="">Seleccione una opción</option>
+        <option>Habilitación inicial</option>
+        <option>Gestión de novedades</option>
+        <option>Auditoría preventiva</option>
+        <option>Membresía anual 360°</option>
+        <option>Academia / Curso</option>
+      </select>
+
+      <label>Mensaje adicional</label>
+      <textarea name="Mensaje" rows="4"></textarea>
+
+      <button type="submit" class="btn">Enviar Solicitud</button>
+
+    </form>
+
+    <br><br>
+
+    <a href="https://wa.me/573226393712?text=Hola,%20quiero%20activar%20un%20servicio%20con%20CONHASALUD%20y%20enviar%20mi%20comprobante%20de%20pago." 
+       target="_blank" 
+       class="btn">
+       Enviar Comprobante por WhatsApp
     </a>
 
-    <a href="https://wa.me/573226393712" target="_blank" class="btn">
-      Escribir por WhatsApp
-    </a>
   </div>
 </section>
 
