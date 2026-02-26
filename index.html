@@ -1,119 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- ================= CONFIGURACIÓN GENERAL ================= -->
+  <!-- ===================================================== -->
+  <!-- CONFIGURACIÓN SEO Y META -->
+  <!-- ===================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>CONHASALUD | Consultora Nacional en Habilitación en Salud</title>
-  <meta name="description" content="Expertos en habilitación, novedades y cumplimiento normativo en salud en Colombia.">
-  <link rel="stylesheet" href="style.css">
+  
+  <meta name="description" content="Consultora especializada en habilitación de servicios de salud en Colombia. Gestión normativa, auditoría preventiva y acompañamiento técnico.">
+  <meta name="keywords" content="habilitación salud Colombia, REPS, auditoría en salud, consultoría habilitación">
+  <meta name="author" content="CONHASALUD">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CONHASALUD | Consultora Nacional en Habilitación">
+  <meta property="og:description" content="Expertos en habilitación y cumplimiento normativo en salud en Colombia.">
 
   <!-- Fuente profesional -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="hero">
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+<header class="hero fade-up">
   <div class="container">
-    <h1>CONHASALUD</h1>
+    <h1 class="logo">CONHASALUD</h1>
     <p class="subtitle">Consultora Nacional en Habilitación y Gestión Normativa</p>
     <p class="tagline">
-      Acompañamos prestadores de servicios de salud en el cumplimiento del
-      Sistema Único de Habilitación en Colombia.
+      Acompañamos prestadores de servicios de salud en el cumplimiento del Sistema Único de Habilitación en Colombia.
     </p>
     <a href="#contacto" class="btn">Solicitar Diagnóstico Inicial</a>
   </div>
 </header>
 
-<!-- ================= SERVICIOS ================= -->
-<section class="section">
+<!-- ===================================================== -->
+<!-- SERVICIOS -->
+<!-- ===================================================== -->
+<section class="section fade-up">
   <div class="container">
     <h2>Nuestros Servicios</h2>
-
     <div class="grid">
 
-      <div class="card">
+      <article class="card">
         <h3>Habilitación de Servicios</h3>
         <p>Diagnóstico, estructuración documental, registro en REPS y preparación para visita.</p>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Gestión de Novedades</h3>
         <p>Apertura, cierre, modificaciones y seguimiento ante Secretaría de Salud.</p>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Auditoría Preventiva</h3>
         <p>Simulación de visita, detección de brechas y plan de mejora técnico.</p>
-      </div>
+      </article>
 
     </div>
   </div>
 </section>
 
-<!-- ================= PLANES ================= -->
-<section class="section bg-light">
-  <div class="container">
-    <h2>Planes y Membresías</h2>
-
-    <div class="grid">
-
-      <div class="card highlight">
-        <h3>Plan Cumplimiento 360°</h3>
-        <p>Soporte técnico continuo durante todo el año.</p>
-      </div>
-
-      <div class="card">
-        <h3>Consultoría Integral</h3>
-        <p>Proyecto completo de habilitación inicial.</p>
-      </div>
-
-      <div class="card">
-        <h3>Academia CONHASALUD</h3>
-        <p>Formación práctica para profesionales de la salud.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= PAGOS ================= -->
-<section class="section">
-  <div class="container">
-    <h2>Medios de Pago</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>NEQUI</h3>
-        <p>322 639 3712</p>
-      </div>
-
-      <div class="card">
-        <h3>PayPal</h3>
-        <a href="https://www.paypal.com/paypalme/darkingve10" target="_blank" class="btn small">
-          Pagar con PayPal
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Transferencia Bancaria</h3>
-        <p>Solicitar datos por WhatsApp.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= FORMULARIO ================= -->
-<section id="contacto" class="section bg-light">
+<!-- ===================================================== -->
+<!-- FORMULARIO -->
+<!-- ===================================================== -->
+<section id="contacto" class="section bg-light fade-up">
   <div class="container">
     <h2>Solicitar Servicio</h2>
 
     <div class="center">
-      <button class="btn" onclick="mostrarFormulario()">Iniciar Solicitud</button>
+      <button class="btn" id="activarFormulario">Iniciar Solicitud</button>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <form id="formularioPro"
@@ -124,19 +92,19 @@
       <input type="hidden" name="_captcha" value="false">
 
       <div class="form-step">
-        <input type="text" name="Nombre" placeholder="Nombre completo" required oninput="mostrarSiguiente(this)">
+        <input type="text" name="Nombre" placeholder="Nombre completo" required>
       </div>
 
-      <div class="form-step hidden">
-        <input type="email" name="Correo" placeholder="Correo electrónico" required oninput="mostrarSiguiente(this)">
+      <div class="form-step">
+        <input type="email" name="Correo" placeholder="Correo electrónico" required>
       </div>
 
-      <div class="form-step hidden">
-        <input type="text" name="Telefono" placeholder="Teléfono o WhatsApp" required oninput="mostrarSiguiente(this)">
+      <div class="form-step">
+        <input type="text" name="Telefono" placeholder="Teléfono o WhatsApp" required>
       </div>
 
-      <div class="form-step hidden">
-        <select name="Servicio" required onchange="mostrarSiguiente(this)">
+      <div class="form-step">
+        <select name="Servicio" required>
           <option value="">Seleccione servicio</option>
           <option>Habilitación</option>
           <option>Novedades</option>
@@ -145,35 +113,90 @@
         </select>
       </div>
 
-      <div class="form-step hidden center">
+      <div class="form-step center">
         <button type="submit" class="btn">Enviar Solicitud</button>
       </div>
 
-    </form>
+      <p id="mensajeConfirmacion" class="mensaje-exito"></p>
 
+    </form>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
 <footer>
   <div class="container">
     <p>© 2026 CONHASALUD - Firma Técnica Especializada en Habilitación en Salud</p>
   </div>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
+<!-- ===================================================== -->
+<!-- SCRIPTS -->
+<!-- ===================================================== -->
 <script>
-function mostrarFormulario() {
-  document.getElementById("formularioPro").style.display = "block";
+
+/* ================================
+   ANIMACIÓN SCROLL SUAVE
+================================= */
+const elements = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+elements.forEach(el => observer.observe(el));
+
+/* ================================
+   MOSTRAR FORMULARIO
+================================= */
+document.getElementById("activarFormulario").addEventListener("click", () => {
+  document.querySelector(".contact-form").style.display = "block";
+});
+
+/* ================================
+   BARRA DE PROGRESO
+================================= */
+const form = document.getElementById("formularioPro");
+const progressBar = document.getElementById("progressBar");
+const inputs = form.querySelectorAll("input, select");
+
+inputs.forEach(input => {
+  input.addEventListener("input", actualizarProgreso);
+});
+
+function actualizarProgreso() {
+  let filled = 0;
+  inputs.forEach(i => {
+    if (i.value.trim() !== "") filled++;
+  });
+  const percent = (filled / inputs.length) * 100;
+  progressBar.style.width = percent + "%";
 }
 
-function mostrarSiguiente(el) {
-  if (el.value.trim() !== "") {
-    let step = el.closest(".form-step");
-    let next = step.nextElementSibling;
-    if (next) next.classList.remove("hidden");
-  }
-}
+/* ================================
+   ENVÍO AJAX SIN RECARGA
+================================= */
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById("mensajeConfirmacion").textContent =
+        "✅ Solicitud enviada correctamente. Te contactaremos pronto.";
+      form.reset();
+      progressBar.style.width = "0%";
+    }
+  });
+});
+
 </script>
 
 </body>
